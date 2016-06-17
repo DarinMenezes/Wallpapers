@@ -11,7 +11,7 @@
         android:layout_gravity="center"
         android:indeterminate="true"/>
 
-    <com.james.wallpapers.views.CustomImageView
+    <com.darin.drisian.views.CustomImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/imageee"
@@ -72,7 +72,7 @@
                 android:background="?attr/selectableItemBackground"
                 android:id="@+id/download">
 
-                <com.james.wallpapers.views.SquareImageView
+                <com.darin.drisian.views.SquareImageView
                     android:layout_width="24dp"
                     android:layout_height="24dp"
                     app:srcCompat="@drawable/ic_download"
@@ -99,7 +99,7 @@
                 android:background="?attr/selectableItemBackground"
                 android:id="@+id/share">
 
-                <com.james.wallpapers.views.SquareImageView
+                <com.darin.drisian.views.SquareImageView
                     android:layout_width="24dp"
                     android:layout_height="24dp"
                     app:srcCompat="@drawable/social"
@@ -126,7 +126,7 @@
                 android:background="?attr/selectableItemBackground"
                 android:id="@+id/apply">
 
-                <com.james.wallpapers.views.SquareImageView
+                <com.darin.drisian.views.SquareImageView
                     android:layout_width="24dp"
                     android:layout_height="24dp"
                     app:srcCompat="@drawable/ic_wallpaper"

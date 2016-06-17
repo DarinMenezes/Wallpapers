@@ -17,7 +17,7 @@
                 app:layout_scrollFlags="scroll|exitUntilCollapsed"
                 android:background="#fff">
 
-                <com.james.wallpapers.views.CustomImageView
+                <com.darin.drisian.views.CustomImageView
                     android:id="@+id/header"
                     android:layout_width="match_parent"
                     android:layout_height="252dp"
@@ -32,7 +32,7 @@
                     android:background="@color/colorPrimary"
                     android:alpha="0.6" />
 
-                <com.james.wallpapers.views.CircleImageView
+                <com.darin.drisian.views.CircleImageView
                     android:layout_width="72dp"
                     android:layout_height="72dp"
                     android:src="@mipmap/wpicon"
