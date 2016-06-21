@@ -35,7 +35,7 @@ public class Supplier extends Application {
 
         URL url;
         try {
-            url = new URL("http://doubledotlabs.github.io/images/wallpapers/wallpapers.json");
+            url = new URL("https://darinmenezes.github.io/wallpapers.json");
         } catch (MalformedURLException e) {
             e.printStackTrace();
             return false;

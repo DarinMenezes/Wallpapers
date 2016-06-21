@@ -81,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
                         .withProfileImagesClickable(false)
                         .withSelectionListEnabledForSingleProfile(false)
                         .addProfiles(
-                                new ProfileDrawerItem().withName(getString(R.string.app_name)).withEmail("Version " + BuildConfig.VERSION_NAME).withIcon(ContextCompat.getDrawable(this, R.mipmap.wpicon))
+                                new ProfileDrawerItem().withName(getString(R.string.app_name)).withEmail("Version " + BuildConfig.VERSION_NAME)
                         )
                         .build())
                 .withSelectedItem(0)
