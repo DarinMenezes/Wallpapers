@@ -38,6 +38,9 @@
 
     <string name="contributors">Contributors:</string>
 
+    <string name="fornax">This app is based on Fornax by James Fenn, an open source wallpaper dashboard.</string>
+    <string name="fornax_url">https://github.com/TheAndroidMaster/Wallpapers</string>
+
     <!-- Don't edit these, credit is needed for the libraries -->
     <string name="libraries">Implemented Libraries:</string>
 

@@ -116,7 +116,9 @@ public class Supplier extends Application {
 
     //additional info to put in the about section
     public ArrayList<HeaderListData> getAdditionalInfo(Context context) {
-        return new ArrayList<>();
+        ArrayList<HeaderListData> info = new ArrayList<>();
+        info.add(new HeaderListData(null, context.getString(R.string.fornax), true, context.getString(R.string.fornax_url)));
+        return info;
     }
 
     public AlertDialog getCreditDialog(Context context, DialogInterface.OnClickListener onClickListener) {
