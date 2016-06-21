@@ -3,7 +3,7 @@
     <string name="app_name">Drisian</string>
 
     <!-- description -->
-    <string name="app_desc">High quality walls</string>
+    <string name="app_desc">High Quality Wallpapers</string>
 
     <!-- Slightly longer description -->
     <string name="description">A free wallpaper app with 40+ High Quality Wallpapers.</string>
@@ -34,7 +34,7 @@
 
 
     <!-- Specify whether to show the contributors in the about section -->
-    <bool name="show_contributors">false</bool>
+    <bool name="show_contributors">true</bool>
 
     <string name="contributors">Contributors:</string>
 
@@ -61,13 +61,13 @@
 
     <!-- tutorial resources -->
     <string name="wallpapers_desc">New wallpapers are always being added, and the app is improved a little every time.</string>
-    <string name="design_title">Flat Design</string>
-    <string name="design_desc">All wallpapers are made from scratch, based on a flat sheet.</string>
+    <string name="design_title">Designed for Quality</string>
+    <string name="design_desc">Wallpapers are all high resolution, made for use on phones.</string>
     <string name="favorites_title">Favorites Section</string>
     <string name="favorites_desc">The favorites section is a place for you to keep all your favorite wallpapers.</string>
     <string name="community_title">Join the Community</string>
-    <string name="community_desc">Join the google plus community for news about upcoming updates, more wallpapers, and pictures of cute cats.</string>
-    <string name="community_url">https://plus.google.com/communities/104074488451953797559</string>
+    <string name="community_desc">Join the google plus community for news about updates, more wallpapers, and pictures of cute cats.</string>
+    <string name="community_url">https://plus.google.com/communities/101199319790750609693</string>
     <string name="rate_title">Ratings and Reviews</string>
     <string name="rate_desc">Reviews are always appreciated. Please provide some feedback about your experience with this app.</string>
 

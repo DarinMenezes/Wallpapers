@@ -13,6 +13,7 @@ import android.util.JsonReader;
 import com.darin.drisian.data.AuthorData;
 import com.darin.drisian.data.HeaderListData;
 import com.darin.drisian.data.WallData;
+import com.google.gson.Gson;
 
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -49,22 +50,39 @@ public class Supplier extends Application {
             for (int i = 0; reader.hasNext(); i++) {
                 reader.beginObject();
 
-                String sectionName = "";
-                if (reader.nextName().matches("name")) sectionName = reader.nextString();
+                String sectionName = "", sectionIcon = "", sectionDescription = "", sectionUrl = "";
+                while (reader.hasNext()) {
+                    String name = reader.nextName();
 
-                if (reader.nextName().matches("wallpapers")) {
-                    sections.add(i, new AuthorData(sectionName, null, null, i, null)); //specify section name, icon url, description, id, and url
+                    if (name.matches("name")) sectionName = reader.nextString();
+                    else if (name.matches("icon")) sectionIcon = reader.nextString();
+                    else if (name.matches("description")) sectionDescription = reader.nextString();
+                    else if (name.matches("url")) sectionUrl = reader.nextString();
+                    else if (name.matches("wallpapers")) {
 
-                    ArrayList<WallData> sectionWalls = new ArrayList<>();
-                    reader.beginArray();
-                    while (reader.hasNext()) {
-                        reader.beginObject();
-                        sectionWalls.add(new WallData(this, reader.nextName().matches("name") ? reader.nextString() : "", reader.nextName().matches("url") ? reader.nextString() : "", sectionName, i, reader.hasNext() && reader.nextName().matches("credit") && reader.nextBoolean())); //specify context, wallpaper name, wallpaper url, author name, author id, and whether credit is required (see values/strings.xml for more info)
-                        reader.endObject();
+                        ArrayList<WallData> sectionWalls = new ArrayList<>();
+                        reader.beginArray();
+                        while (reader.hasNext()) {
+                            reader.beginObject();
+
+                            String wallName = "", wallUrl = "";
+                            boolean credit = false;
+                            while (reader.hasNext()) {
+                                String thisName = reader.nextName();
+                                if (thisName.matches("name")) wallName = reader.nextString();
+                                else if (thisName.matches("url")) wallUrl = reader.nextString();
+                                else if (thisName.matches("credit")) credit = reader.nextBoolean();
+                            }
+
+                            sectionWalls.add(new WallData(this, wallName, wallUrl, sectionName, i, credit)); //specify context, wallpaper name, wallpaper url, author name, author id, and whether credit is required (see values/strings.xml for more info)
+                            reader.endObject();
+                        }
+                        walls.add(i, sectionWalls);
+                        reader.endArray();
                     }
-                    walls.add(i, sectionWalls);
-                    reader.endArray();
                 }
+
+                sections.add(i, new AuthorData(sectionName, sectionIcon, sectionDescription, i, sectionUrl)); //specify section name, icon url, description, id, and url
                 reader.endObject();
             }
             reader.endArray();
