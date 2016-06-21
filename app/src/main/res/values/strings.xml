@@ -3,10 +3,10 @@
     <string name="app_name">Drisian</string>
 
     <!-- description -->
-    <string name="app_desc">A bunch of high quality walls, made by Darin Menezes</string>
+    <string name="app_desc">High quality walls</string>
 
     <!-- Slightly longer description -->
-    <string name="description">A bunch of high quality walls, made by Darin Menezes.</string>
+    <string name="description">A free wallpaper app with 40+ High Quality Wallpapers.</string>
 
     <!-- Activity/fragment/drawer item names -->
     <string name="title_home">Home</string>
@@ -30,8 +30,7 @@
     <string name="download_complete_msg">Your wallpaper has been downloaded.</string>
 
     <!-- Shows as a popup whenever the version number in app/build.gradle is changed -->
-    <string name="changelog">Redesigned the UI for easier navigation, greatly improved performance, and added a few more walls.
-    </string>
+    <string name="changelog">BUTTER BUTTER BUTTER CABBAGE</string>
 
 
     <!-- Specify whether to show the contributors in the about section -->
